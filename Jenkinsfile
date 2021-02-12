@@ -5,13 +5,13 @@ pipeline {
     }
     stages {
         stage('Git Clone') {
-            //Clone Application from GitHub
+            //Clones Application from GitHub
             steps {
                 git 'https://github.com/marbellacovino/simple-node-js-react-npm-app.git'
             }
         }
         stage('Build project with NPM') {
-            //Install Project Dependencies
+            //Installs Project  Dependencies into the node_modules/ directory
             steps {
                 echo 'sh: npm install'
             }
